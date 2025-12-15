@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.logo {
+    height:44px;
+    padding: 10px;
+    box-sizing: border-box; /*gli elementi interni non cambiano la dimensione dell'oggetto*/
+}
+
+.logo img {
+    max-height: 100%;
+}
+/*
+si può anche scrivere
+.logo {
+    img{
+
+    }
+}
+*/
+
+div {
+    border: 1px solid white;
+    margin: 9px;
+}
+
+
+p,
+li,
+h4 {
+    color: white;
+}
