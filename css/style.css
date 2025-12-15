@@ -1,6 +1,34 @@
-body {
-    background-color: black;
+@font-face {
+    font-family: Orbitron;
+    src: url(../fonts/orbitron-regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Orbitron;
+    src: url(../fonts/orbitron-bold.woff2);
+    font-weight: 700;
+}
+* {
     margin: 0;
+}
+body {
+    background-image: url("../immagini/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Orbitron, Arial, Helvetica, sans-serif;    
+    font-weight: 400;
+    font-size: 16px;
+}
+button {
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
 .logo {
@@ -20,15 +48,99 @@ si può anche scrivere
     }
 }
 */
-
 div {
-    border: 1px solid white;
-    margin: 9px;
+    border: 0px solid white;
+    color: white;
+}
+div.logo, div.wrap {
+    border: 0px solid white;
+    color: white;
 }
 
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-p,
-li,
-h4 {
-    color: white;
+.wrap {
+    width: 100%;
+    max-width: 1292px;
+    height: 100%;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.row-button {
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+}
+
+.row-contentbox, .row-contsx {
+    display: flex;
+    gap: 20px;
+}
+
+.colonna-pilotimech {
+    width: calc(66.6% - 10px);
+    border:0px solid rgb(255, 255, 255);
+}
+
+.colonna-stat {
+    width: calc(33.3% - 10px);
+    border:2px solid rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+}
+
+.colonna-stat p {
+    justify-self: center;
+}
+
+.col-sceltapilota, .col-sceltamech {
+    width: calc(50% - 10px);
+    border:2px solid rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+}
+
+.col-sceltapilota h2, .col-sceltamech h2 {
+    width: 100%;
+    margin: 14px 0;
+}
+
+.col-listasquadre {
+    width: 100%;
+    border:2px solid rgb(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 39px rgb(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.mecha-image {
+    height: 410px;
+    max-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    justify-self: center;
+}
+
+.squadlogo {
+    height: 53px;
+    width: 53px;
+}
+
+.titlechar, .titlemech {
+    display: flex;
+}
+
+.textChar, .textMech {
+    width: calc(100% - 63px);
+    justify-content: center; 
+    text-align: center;
 }

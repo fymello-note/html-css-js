@@ -28,10 +28,6 @@ tag principali html
         <style>
             .rosso(border-color:blue) /*override del link di pagina*/
         </style>
-    </head>
-    <body>
-        <header>
-            <nav></nav>
         </header>
 
         <main>

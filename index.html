@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 
 <head>
@@ -12,19 +12,19 @@
         <div class="logo"><img src="immagini/web_logo.png" alt="BattleTech" title="battletech"></div>
     </header>
     <main>
-        <div id="wrapper">
-            <div id="redlance">
-                <p >hi</p>
+        <div id="wrapper" class="wrap">
+            <div class="row-button">
+                <button>Red team</button>
+                <button>Blue team</button>
             </div>
-            <br>
-            <div  id="superContainer">
-                <div  id="left-side">
-                    <div  id="top-part">
-                        <div  id="character">
-                            <div id="title-char">
-                                <h4 >character</h4>
+            <div  id="superContainer" class="row-contentbox">
+                <div  id="left-side" class="colonna-pilotimech">
+                    <div  id="top-part" class="row-contsx">
+                        <div  id="character" class="col-sceltapilota">
+                            <div class="titlechar">
+                                <div class="imgChar"><img src="immagini/redsquad.png" alt="" class="squadlogo"></div>
+                                <div class="textChar"><h2>SELECT MECHWARRIOR</h2></div>
                             </div>
-
                             <div id="character-list">
                                 <ul>
                                     <li > character 1</li>
@@ -33,12 +33,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <div  id="mecha">
-                            <div id="title-mecha">
-                                <h4 >mecha</h4>
-
+                        <div  id="mecha" class="col-sceltamech">
+                            <div class="titlemech">
+                                <div class="imgMech"><img src="immagini/redsquad.png" alt="" class="squadlogo"></div>
+                                <div class="textMech"><h2>SELECT MECHA</h2></div>
                             </div>
-
                             <div id="mecha-list">
                                 <ul>
                                     <li > mecha 1</li>
@@ -49,12 +48,14 @@
                         </div>
                     </div>
                     <br>
-                    <div  id="bottom-part">
+                    <div  id="bottom-part" class="col-listasquadre">
                         <p >hi</p>
                     </div>
                 </div>
-                <div  id="right-side">
-                    <p >hi</p>
+                <div  id="right-side" class="colonna-stat">
+                    <p>STATS</p>
+                    <div></div>
+                    <img src="immagini/mecharmorfront.png" alt="super mega" class="mecha-image">
 
                 </div>
             </div>

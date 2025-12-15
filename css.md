@@ -26,15 +26,44 @@ body {
 
 
 > Esemepio:
-> ```html
-> <div class="pollo">
->     <div class="rosso">
->     </div>
->     <div class="rosso">
->     </div>
-> </div>
-> 
-> <style>
->   .pollo .rosso {}
-> </style>
-> ```
+ ```html
+ <div class="pollo">
+     <div class="rosso">
+
+     </div>
+
+     <div class="rosso">
+
+     </div>
+ </div>
+ 
+ <style>
+   .pollo .rosso {}
+ </style>
+ ```
+
+### Display:
+- inline -- gli elementi sono affiancati
+- block -- sono dei blocchi che non sono affiancati
+- table -- si comporta come una tabella
+- flex -- usato per creare colonne e righe
+
+### Position: (di default gli elementi non sono in nessuna categoria)
+- relative -- sono relativi, non sono messi in maniera assoluta, sono dove html mi dice che stanno;
+- absolute -- hanno la posizione assoluta sull'elemento relativo superiore;
+- fixed -- è sempre sopra a tutto;
+- sticky -- rimane appiccicato dove lo si mette;
+
+per centrare 
+
+
+ ```css
+ element {
+    display: inline;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ ```
+
+ usare un box-shadow generator per creare le box shadow
