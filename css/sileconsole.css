@@ -1,0 +1,298 @@
+
+
+@font-face {
+  font-family: Orbitron; 
+  src: url(../fonts/Orbitron-Regular.woff2); 
+  font-weight: 400;
+}
+@font-face {
+  font-family: Orbitron; 
+  src: url(../fonts/Orbitron-Bold.woff2); 
+  font-weight: 700;
+}
+
+* {
+    margin:0;
+}
+body {
+    background-color: #000;
+    margin: 0; 
+    background-image: url(../immagini/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    ;
+}
+
+h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.logo {
+    height: 44px;
+    padding: 10px;
+}
+.logo img {
+    max-height: 100%;
+}
+
+.border0 {border:0px solid #fff; color: #fff;}
+
+
+main {    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrap {
+    width: 100%;
+    max-width: 1292px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.row-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;    
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.row-buttons button {
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    opacity: 0.3;
+    font-size: 1.063rem;
+    text-align: center;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: Orbitron, sans-serif;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.row-buttons button:hover {
+    opacity: 1;
+}
+.row-buttons button.selezionato {
+    opacity: 1;
+}
+.row-contbox, .row-contsx {
+    display: flex;
+    gap: 20px; flex-wrap: wrap;
+}
+.colonna-pilotimech {
+    width:calc(66.6% - 10px);
+}
+.colonna-stat {
+    width:calc(33.3% - 10px);
+    border:2px solid #ffffff;
+    box-sizing: border-box;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+    
+
+}
+.col-sceltapilota, .col-sceltamech {
+    width:calc(50% - 10px);
+    border:2px solid #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+}
+
+.col-listasquadre {
+    width:100%;
+    border:2px solid #ffffff;
+    box-sizing: border-box;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 39px rgba(255, 255, 255, 0.5);
+}
+.col-sceltapilota h2, .col-sceltamech h2 {
+    text-align: center;
+    width: 100%;
+    margin: 14px 0;
+}
+.col-sceltapilota::before, .col-sceltamech::before {
+    content: "";
+    position: absolute;
+    height: 53px;
+    width: 53px;
+    background-image: url(../immagini/redsquad.png);
+    background-size: contain;
+    top: 15px;
+    left: 10px;
+}
+.colonna-stat h2 {
+    text-align: center;
+    margin: 14px 0;
+}
+.extarmor {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+.contmechw {
+    height: 309px;
+    overflow: auto;
+    margin-top: 40px;
+}
+.listapiloti {
+    padding: 0;
+   
+}
+.listapiloti li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    width: 98%;
+}
+.listapiloti li.selezionatored {
+    background-color: rgba(100, 0, 0, 0.6);
+}
+.listapiloti li .bloccolistapilota {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    position: relative;
+}
+.listapiloti li .bloccolistapilota img {
+    width: 100%;
+    max-width: 124px;
+}
+.listapiloti li .bloccolistapilota .mechwstat {padding-top: 15px;}
+.listapiloti li .bloccolistapilota .mechwstat h3{
+    font-size: 0.875rem;
+}
+.listapiloti li .bloccolistapilota .mechwstat p {
+    margin: 0;
+    font-size: 0.688rem;
+}
+
+input[type="radio"].css-radio {position: absolute; 
+    z-index:100; opacity: 0; overflow: hidden;  width: 338px; height: 124px; margin:-1px; padding:0; border:0; cursor: pointer;
+
+}
+input[type="radio"].css-radio + label.css-labelradio {
+    width: 35px; height: 32px;  display: inline-block; 
+    line-height: 32px; background-repeat:no-repeat; background-position: 0 0; 
+    font-size:32px; vertical-align:middle; cursor: pointer;  
+    background-image:url(../immagini/checkbox.png); 
+     float: left; position: absolute; top: 15px; right: 0;}
+input[type="radio"].css-radio:checked + label.css-labelradio { background-position: 0 -32px;}
+
+
+.contmechw::-webkit-scrollbar {
+    width: 12px;
+}
+/* Track */
+.contmechw::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3); 
+	background: transparent;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.contmechw::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	
+}
+.contmechw::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,255,255,0.4); 
+}
+
+.triangolo {
+    position: absolute;
+    bottom: 1px;
+    right: 3px;
+}
+
+/* posizioni armatura */
+.extarmor p {font-size: 0.625rem; position: absolute;}
+.extArHst {
+    top: 13%;
+    left: 48%;
+}
+.extArCTst {
+    top: 23%;
+    left: 47%;
+}
+.extArLTst {
+    top: 12%;
+    right: 35%;
+}
+.extArRTst {
+   top: 12%;
+    left: 35%;
+}
+
+.contbuttonstart {
+    display: flex;
+    justify-content: space-between;
+}
+.contbuttonstart button:hover {
+    opacity: 1;
+}
+.contbuttonstart button {
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    opacity: 0.3;
+    font-size: 0.75rem;
+    text-align: center;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: Orbitron, sans-serif;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.contlistateam {
+    display: flex;
+    gap: 20px
+}
+.contlistateam .redteam, .contlistateam .blueteam {
+    width: calc(50% - 20px);
+}
+.col-listasquadre h3, .col-listasquadre h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #333;
+        margin-top: 20px;
+}
+
+.blink {
+  -webkit-animation: blink 0.5s step-end infinite;
+ -moz-animation: blink 0.5s step-end infinite;
+ -o-animation: blink 0.5s step-end infinite;
+ animation: blink 0.5s step-end infinite;
+ }
+ 
+ @-webkit-keyframes blink {
+ 67% { opacity: 0 }
+ }
+ 
+ @-moz-keyframes blink {
+ 67% { opacity: 0 }
+ }
+ 
+ @-o-keyframes blink {
+ 67% { opacity: 0 }
+ }
+ 
+ @keyframes blink {
+  67% { opacity: 0 }
+  }

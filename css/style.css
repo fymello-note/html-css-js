@@ -16,6 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-color: black;
     min-height: 100vh;
     margin: 0;
     font-family: Orbitron, Arial, Helvetica, sans-serif;    
