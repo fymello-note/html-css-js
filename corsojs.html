@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+<body style="background-color: black;">
+
+</body>
+
+</html>
+
+
+<script>
+    /*  
+        var  -- è disponibile sempre
+        const  -- è costrante 
+        let -- viene creata solo all'interno di un blocco di codice compreso tra parentesi graffe
+    */
+
+    function esempioVariabili() {
+        if (false) {
+            let x = 10;
+            console.log(x);
+        }
+        // console.log(x); // questo stamperà che non hai definito la variabile
+
+        if (false) {
+            var x = 10;
+            console.log(x);
+        }
+        // console.log(x); // questo stamperà la variabile
+    }
+
+    var x = 20; 
+    var y = "20";
+    var z = true;
+
+    // x = x.toString();
+    // y = parseInt(y); 
+
+    // console.log(x + y);
+
+    if (x == y) {
+        console.log("Uguali con ==");
+    } else {
+        console.log("Diversi con ==");
+    }
+
+    if (x === y) {
+        console.log("Uguali con ===");
+    } else {
+        console.log("Diversi con ===");
+    }
+
+    var array = [1, 2, 3];
+
+    switch (x) {
+        case "20":
+                console.log("venti"); 
+            break;
+        case 20:
+                console.log("numero"); 
+            break;
+    
+        default:
+            break;
+    }
+</script>

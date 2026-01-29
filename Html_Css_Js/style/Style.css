@@ -1,0 +1,421 @@
+
+/* import di font    */
+@font-face {
+    font-family: Orbitron;
+    src: url(../assets/font/Orbitron/Orbitron-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Orbitron;
+    src: url(../assets/font/Orbitron/Orbitron-Bold.woff2);
+    font-weight: 700;
+}
+/*  */
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+h2{
+     text-shadow: 1px 1px 10px #ffff,1px 1px 10px #0000;
+    font-size: 0.875 rem;
+}
+button{
+    cursor: pointer;
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    color: aliceblue;
+    background-image: url("../assets/immagini/bg.jpg");
+    background-size: cover; 
+
+    font-family: Orbitron,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.logo{
+    height: 44px;
+    padding: 10px;
+    
+}
+
+.logo .img-logo{
+    max-height: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1292px;
+}
+
+.row-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    /* border: 2px solid rgb(246, 255, 0, 1); */
+
+}
+.row-buttons button{
+    padding: 5px 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    opacity: 0.3;
+    font-size: 1.063rem;
+    color: white;
+    font-weight: 400;
+    font-family: Orbitron, sans-serif;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* per rendere i pulsanti selezionati */
+.row-buttons button.selezionato {
+    opacity: 1;
+   
+}
+.row-buttons button:hover{
+    
+    opacity: 1;
+}
+
+
+.row-contbox, .row-contsx {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;    
+}
+
+.colonna-pilotimech{
+    width: calc(66.6% - 10px);   
+    box-sizing: border-box;
+}
+
+.colonna-stat{
+    position: relative;
+    width: calc(33.3% - 10px);
+    /* border: 2px solid rgb(255, 0, 0, 1); */
+    border: 2px solid #ffff;
+    box-sizing: border-box;
+    text-align: center;
+    padding : 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    -webkit-box-shadow: 0 0 39px rgba(255,255,255,0.5);
+    box-shadow: 0 0 39px rgba(255,255,255,0.5);
+}
+
+
+
+
+.col-sceltapilota, .col-sceltamech {
+    position: relative;
+    width: calc(50% - 10px);
+    border: 2px solid #ffff;
+    box-sizing: border-box;
+    padding:20px;
+    -webkit-box-shadow: 0 0 39px rgba(255,255,255,0.5);
+    box-shadow: 0 0 39px rgba(255,255,255,0.5);
+}
+
+.intestazione-col {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    /* outline: 1px solid red; */
+    align-items: center;
+}
+.intestazione-col>img {
+    height: 53px;
+}
+.intestazione-col>h2 {
+    width: 100%;
+   
+}
+
+.redsquad-logo {
+    height: 100%;
+   
+}
+
+
+
+.container-img-armor{
+    width: 100%;
+   max-width: 300px;
+   position: relative;
+   margin: 0 auto;
+}
+
+
+/* definisco il contenitore della lista per far apparire lo scroll */
+.contmechw{
+    height: 309px;
+    overflow-y: auto;
+    margin-top: 40px;
+}
+
+.lista-piloti{
+    padding: 0;
+}
+.lista-piloti li{
+    width: 98%;
+    padding: 0;
+     margin-bottom: 15px;
+    /* tolgo il pallino */
+    display: block;
+   
+}
+
+.lista-mech{
+    padding: 0;
+}
+.lista-mech li{
+    width: 98%;
+    padding: 0;
+     margin-bottom: 15px;
+    /* tolgo il pallino */
+    display: block;
+   
+}
+.pilota{
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+.selezionato-red{
+    background-color: rgba(100,0,0,0.6);
+}
+.selezionato-blu{
+    background-color: rgba(0,0,100,0.6);
+}
+.lista-piloti li .pilota img{
+    width: 100%;
+    max-width: 124px;
+}
+.mech {
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+
+.lista-mech li .mech img{
+    width: 100%;
+    max-width: 124px;
+}
+/* contenitore delle stats */
+.mechwstat h3{
+     
+    font-size: 0.875rem;
+}
+.mechwstat p{
+    font-size: 0.688rem;
+}
+
+/* radio button */
+/* nascondo il radio button */
+input[type="radio"].css-radio{
+    position: absolute;
+    /* z-index definisce il layer così facendo lo metto sotto a tutto */
+    z-index: 100;
+    opacity: 0;
+    overflow: hidden;
+    width: 338px;
+    height: 124px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+/*  stile label del radio button che gli drà lo stile grafico*/
+/* il + dice che sono fratelli e non uno sotto l'altro */
+input[type="radio"].css-radio + label.css-label-radio{
+    /* definisco le dimenzioni */
+    width: 35px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+
+    /* deifnisco l'immagine e la posizione di essa */
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(../../immagini/checkbox.png);
+
+    /* definisco la posizione della label */
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+/* stile del radio button quando è selezionato */
+input[type="radio"].css-radio:checked + label.css-label-radio{
+    /* cambia posizione dell'immagine prendendo il checked   */
+    background-position: 0 -32px;
+}
+
+
+/* personalizzazione della scrollbar */
+.contmechw::-webkit-scrollbar{
+    width: 12px;
+    
+}
+/* dimensione della guida della scrollbar */
+.contmechw::-webkit-scrollbar-track{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background: transparent;
+   -webkit-radius: 10px;
+border-radius: 10px;
+
+}
+/*dimensione del cursore dellascrollbar  */
+.contmechw::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    
+}
+/* quando la finestra è inattiva */
+.contmechw::-webkit-scrollbar-thumb:window-inactive
+{
+    background: rgba(255,255,255,0.4);
+}
+
+.contmechs::-webkit-scrollbar{
+    width: 12px;
+    
+}
+/* dimensione della guida della scrollbar */
+.contmechs::-webkit-scrollbar-track{
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background: transparent;
+   -webkit-radius: 10px;
+border-radius: 10px;
+
+}
+/*dimensione del cursore dellascrollbar  */
+.contmechs::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    
+}
+/* quando la finestra è inattiva */
+.contmechs::-webkit-scrollbar-thumb:window-inactive
+{
+    background: rgba(255,255,255,0.4);
+}
+
+.container-img-armor p{
+    position: absolute;
+    font-size: 0.625rem;
+    
+}
+/* posizioni stats armatura */
+.extArHst{
+    top: 13%;
+    left: 47.5%;
+}
+.extArCTst{
+    top: 23%;
+    left: 47%;
+}
+.extLTst{
+    top: 12%;
+    right: 35%;
+}
+.extRTst{
+    top: 12%;
+    left: 35%;
+}
+
+/* parte per lista giocatpro */
+
+.col-listasquadre {
+    position: relative;
+    width: 100%;
+    border: 2px solid #ffff;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 39px rgba(255,255,255,0.5);
+    box-shadow: 0 0 39px rgba(255,255,255,0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonlistasquadre{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.buttonlistasquadre button{
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding: 5px 10px;
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    font-size: 0.750 rem;
+}
+.buttonlistasquadre button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.squadre{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.squadre div{   
+    width: calc(50% - 5px);
+}
+.squadre ul{
+    list-style: none;
+    padding-left: 0;
+}
+.col-listasquadre h3{
+    
+    text-shadow: 1px 1px 10px #ffff,1px 1px 10px #0000;
+    font-size: 0.875rem;
+    
+}
+
+
+
+
+
+.trinagolo{
+    position: absolute;
+    bottom: 1px;
+    right: 3px;
+}
+.trinagolo img{
+    width: 10px;
+    /* animazione css blink */
+    animation: blink 0.5s infinite;
+    
+}
+/* creo animazione */
+@keyframes blink {
+    67% {opacity: 0;}
+}

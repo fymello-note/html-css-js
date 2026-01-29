@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Untitled Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #000;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+		crossorigin="anonymous">
+	</script>
+    <script src="./script/mechClass.js"></script>
+    <script src="./script/listaMechWarior.js"></script>
+    <link rel="stylesheet" href="./style/Style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          class="img-logo"
+          src="./Assets/immagini/web_logo.png"
+          alt="Battletech"
+          title="logo del sito"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <div class="row-buttons">
+          <button class="selezionato">squadra rossa</button>
+          <button>squadra blu</button>
+        </div>
+        <div class="row-contbox">
+          <div class="colonna-pilotimech">
+            <div class="row-contsx">
+              <div class="col-sceltapilota">
+                <div class="intestazione-col">
+                  <img
+                    class="redsquad-logo"
+                    src="./Assets/immagini/redsquad.png"
+                    alt=""
+                  />
+                  <h2>scelta pilota</h2>
+                </div>
+                <!-- Lista dei piloti -->
+                <div class="contmechw">
+                  <ul class="lista-piloti">
+                  </ul>
+                
+                </div>
+                <!-- immagine che blink -->
+                <div class="trinagolo">
+                    <img src="../immagini/blink.png" alt="">
+                </div>  
+              </div>
+              <div class="col-sceltamech">
+                <div class="intestazione-col">
+                  <img
+                    class="redsquad-logo"
+                    src="./Assets/immagini/redsquad.png"
+                    alt=""
+                  />
+                  <h2>scelta mecha</h2>
+                </div>
+                <div class="contmechs">
+                  <ul class="lista-mech">
+                  </ul>
+                
+                </div>
+                <!-- immagine che blink -->
+                <div class="trinagolo">
+                    <img src="../immagini/blink.png" alt="">
+                </div>
+              </div>
+
+              <div class="col-listasquadre">
+                <div class="buttonlistasquadre">
+                  <button>Aggiungi</button>
+                  <button>Inizia Partita</button>
+                </div>
+                <h3>SELEZIONE MECHA E COMBATTENTI</h3>
+                <div class="squadre">
+                    <div>
+                  <h3>Squadra Rossa</h3>
+                  <ul>
+                    <li>giocatore 1</li>
+                    <li>giocatore 1</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Squadra blu</h3>
+                  <ul>
+                    <li>giocatore 1</li>
+                    
+                    <li>giocatore 1</li>
+                  </ul>
+                </div>
+                </div>
+                <!-- immagine che blink -->
+                <div class="trinagolo">
+                    <img src="../immagini/blink.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colonna-stat">
+            <p>STATS</p>
+
+            <div class="container-img-armor">
+              <img
+                src="./Assets/immagini/mecharmorfront.png"
+                title="Immagine mech"
+                alt="Mech frontale"
+                width="100%"
+              />
+              <p class="extArHst"></p>
+              <p class="extArCTst"></p>
+              <p class="extLTst"></p>
+              <p class="extRTst"></p>
+            </div>
+            <!-- immagine che blink -->
+                <div class="trinagolo">
+                    <img src="../immagini/blink.png" alt="">
+                </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
